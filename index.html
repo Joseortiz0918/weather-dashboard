@@ -9,19 +9,46 @@
 </head>
 <body>
     <header>
-        <nav class="navbar bg-primary-subtle" id="nav">
+        <nav class="navbar bg-info text-dark" id="nav">
             <div class="container-fluid">
               <a class="navbar-brand">Weather Dashboard</a>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+              
             </div>
-          </nav>
-          <section>
-            
-          </section>
+          </nav>     
     </header>
+    <main>
+        <div class="row">
+            <aside class="col-4 border border-dark bg-info-subtle">
+                <H2>Recent Searches</H2>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchText">
+                <button class="btn btn-outline-success text-dark" id="searchBtn" type="submit">Search</button>
+              </form>
+            </aside>
+            <section class="col-8 border border-dark">
+                <section id="forecast" class="container border border-dark">
+                    <div class="row">
+                        <h2 id="cityName" class="col-8">St.Paul</h2>
+                        <p id="date" class="col-4">11/12</p>
+                    </div>
+                    <img src="">
+                    <p id="temp"> temp</p>
+                    <p id="wind"> wind</p>
+                    <p id="humidity">humidity</p>
+
+                </section>
+                <section id="fiveDayForecast" class="container border border-dark">
+                <div class="row">
+                    <div class="col border border-dark bg-info" id="one"> hello</div>
+                    <div class="col"id="two"> heloo</div>
+                    <div class="col" id="three"> dap</div>
+                    <div class="col" id="four"> dre</div>
+                    <div class="col" id="five"> das</div>
+                </section>
+                </div>
+            </section>
+        </div>
+    </main>
     
     <script src="assets/js/script.js"></script>
 </body>
