@@ -1,12 +1,12 @@
-var apiKey = "4f0caa1e03b1114f7e2701c7497f9f55";
+var apiKey = "&appid=4f0caa1e03b1114f7e2701c7497f9f55";
 var requestCurrent =
-  "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=" +
+  "https://api.openweathermap.org/data/2.5/forecast?"+
   apiKey;
 var requestWeather =
-  "https://api.openweathermap.org/data/2.5/forecast?units=imperial&appid=" +
-  apiKey;
+  "https://api.openweathermap.org/data/2.5/forecast?units=imperial" +
+  apiKey+"&";
 var requestLocation =
-  "http://api.openweathermap.org/geo/1.0/direct?&limit=5&appid="+ apiKey +'&q=';
+  "http://api.openweathermap.org/geo/1.0/direct?&limit=5"+ apiKey +'&q=';
 
 var searchBtn = document.getElementById("searchBtn");
 var searchText = document.getElementById("searchText");
@@ -37,9 +37,14 @@ function searchCity(city){
 }
 
 function searchForecast(lon,lat){
-  var requestCity = requestCurrent + lon + lat
-  
-
+  var requestCity = requestCurrent + "&lon="+lon + "&lat="+lat
+  fetch(requestCity)
+  .then(function(response){
+    return response.json()
+  })
+  .then(function(data){
+    console.log(data)
+  })
 
 }
 
