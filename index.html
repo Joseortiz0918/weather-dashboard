@@ -6,13 +6,18 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
     <header>
         <nav class="navbar bg-info text-dark" id="nav">
             <div class="container-fluid">
-              <a class="navbar-brand">Weather Dashboard</a>
-              
+              <p class="navbar-brand">Weather Dashboard</p>
+              <p id="timeEl"></p>
             </div>
           </nav>     
     </header>
@@ -21,7 +26,7 @@
             <aside class="col-4 border border-dark bg-info-subtle">
                 <H2>Recent Searches</H2>
                 <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchText">
+                <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search" id="searchText">
                 <button class="btn btn-outline-success text-dark" id="searchBtn" type="submit">Search</button>
               </form>
               <button class="btn btn-outline-success text-dark" id="clearBtn" type="submit">Clear</button>
@@ -29,13 +34,15 @@
             <section class="col-8 border border-dark">
                 <section id="forecast" class="container border border-dark">
                     <div class="row">
-                        <h2 id="cityName" class="col-8">St.Paul</h2>
-                        <p id="date" class="col-4">11/12</p>
+                        <h2 class="col-8">Forecast</h2><h2 id="date" class="col-4"></h2>
+                        <h3 id="cityName"></h3>
+                        <h2 id="description"></h2>
+                        <h2><img id="icon"></img></h2>
                     </div>
-                    <img src="">
-                    <p id="temp"> temp</p>
-                    <p id="wind"> wind</p>
-                    <p id="humidity">humidity</p>
+                   
+                    <p id="temp"> Temp: </p>
+                    <p id="wind"> Wind: </p>
+                    <p id="humidity">Humidity: </p>
 
                 </section>
                 <section id="fiveDayForecast" class="container border border-dark">
@@ -52,9 +59,7 @@
     </main>
     <script
       src="./assets/js/script.js">
-      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-      crossorigin="anonymous"
-    </script>
+      </script>
+       
 </body>
 </html>
